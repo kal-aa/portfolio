@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+button,
+a,
+select,
+input {
+  @apply cursor-pointer transition-all duration-200 ease-in-out;
+}
+
 @layer utilities {
   .flex- {
     @apply flex justify-between items-center;
@@ -255,5 +262,35 @@
     .p_xs_semibold-laptop {
       @apply text-[16px] font-semibold;
     }
+  }
+
+  /* Header */
+  .header-container {
+    @apply px-[48px] py-[24px] xl:px-[64px] xl:py-[32px] bg-white border-b;
+  }
+
+  .email-phone-container {
+    @apply hidden text-center sm:flex sm:flex-col sm:items-center sm:space-y-2 md:flex md:flex-row md:space-y-0 md:space-x-[32px];
+  }
+
+  .hamburger-menu {
+    @apply flex flex-col items-center justify-center space-y-[6px] w-8 h-10 cursor-pointer;
+  }
+
+  .hamburger-menu span {
+    @apply w-6 h-[3px] transition-all duration-300;
+  }
+
+  .link-hover {
+    @apply hover:text-[rgba(38,31,34,0.75)];
+  }
+
+  /* Footer */
+  .footer-container {
+    @apply flex items-center justify-between w-full px-16;
+  }
+
+  .footer-right-section {
+    @apply hidden sm:flex sm:flex-col-reverse sm:items-center md:flex-col-reverse lg:flex-row lg:space-x-8 lg:items-center;
   }
 }
