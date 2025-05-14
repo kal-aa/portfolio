@@ -1,26 +1,259 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .flex- {
+    @apply flex justify-between items-center;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .try {
+    @apply text-8xl;
+  }
+
+  /* Colors */
+  .brand-gradient {
+    @apply bg-gradient-to-r from-[#FE572E] to-[#FC3A79];
+  }
+
+  .primary {
+    @apply text-[#FC3A79];
+  }
+
+  .secondary {
+    @apply text-[#FE572E];
+  }
+
+  .black {
+    @apply text-[rgba(38,31,34,1)];
+  }
+
+  .black-bg {
+    @apply bg-[rgba(38,31,34,1)];
+  }
+
+  .black-75 {
+    @apply text-[rgba(38,31,34,0.75)];
+  }
+
+  .black-50 {
+    @apply text-[rgba(38,31,34,0.5)];
+  }
+
+  .black-25 {
+    @apply text-[rgba(38,31,34,0.25)];
+  }
+
+  .black-25-bg {
+    @apply bg-[rgba(38,31,34,0.25)];
+  }
+
+  .black-10 {
+    @apply text-[rgba(38,31,34,0.1)];
+  }
+
+  .black-10-border {
+    @apply border-[rgba(38,31,34,0.1)];
+  }
+
+  .black-5 {
+    @apply text-[rgba(38,31,34,0.05)];
+  }
+
+  .error {
+    @apply text-[#E63329];
+  }
+
+  /* PHONE font size and weight */
+  .H1-phone {
+    @apply text-[69px] font-bold;
+  }
+
+  .H2-phone {
+    @apply text-[55px] font-bold;
+  }
+
+  .H2_regular-phone {
+    @apply text-[55px] font-normal;
+  }
+
+  .H3-phone {
+    @apply text-[44px] font-light;
+  }
+
+  .H3_bold-phone {
+    @apply text-[44px] font-bold;
+  }
+
+  .H4-phone {
+    @apply text-[36px] font-bold;
+  }
+
+  .H4_semibold-phone {
+    @apply text-[36px] font-semibold;
+  }
+
+  .H4_light-phone {
+    @apply text-[36px] font-light;
+  }
+
+  .H5-phone {
+    @apply text-[29px] font-bold;
+  }
+
+  .H5_light-phone {
+    @apply text-[29px] font-light;
+  }
+
+  .P-phone {
+    @apply text-[18px] font-normal;
+  }
+
+  .P_semibold-phone {
+    @apply text-[18px] font-semibold;
+  }
+
+  .p_xs-phone {
+    @apply text-[14px] font-bold;
+  }
+
+  .p_xs_semibold-phone {
+    @apply text-[14px] font-semibold;
+  }
+
+  .p_xs_extrabold-phone {
+    @apply text-[14px] font-extrabold;
+  }
+
+  /* TABLET font size and weight */
+  @media (min-width: 640px) {
+    .H1-tablet {
+      @apply text-[101px] font-bold;
+    }
+
+    .H2-tablet {
+      @apply text-[76px] font-bold;
+    }
+
+    .H3-tablet {
+      @apply text-[57px] font-light;
+    }
+
+    .H3_bold-tablet {
+      @apply text-[57px] font-bold;
+    }
+
+    .H4-tablet {
+      @apply text-[43px] font-bold;
+    }
+
+    .H4_light-tablet {
+      @apply text-[43px] font-light;
+    }
+
+    .H5-tablet {
+      @apply text-[32px] font-bold;
+    }
+
+    .H5_semibold-tablet {
+      @apply text-[32px] font-semibold;
+    }
+
+    .H5_light-tablet {
+      @apply text-[32px] font-light;
+    }
+
+    .P-tablet {
+      @apply text-[18px] font-normal;
+    }
+
+    .P_bold-tablet {
+      @apply text-[18px] font-bold;
+    }
+
+    .P_xl-tablet {
+      @apply text-[21px] font-normal;
+    }
+
+    .P_xl_bold-tablet {
+      @apply text-[21px] font-bold;
+    }
+
+    .p_xs-tablet {
+      @apply text-[15px] font-bold;
+    }
+
+    .p_xs_extrabold-tablet {
+      @apply text-[15px] font-extrabold;
+    }
+
+    .p_xs_semibold-tablet {
+      @apply text-[15px] font-semibold;
+    }
+  }
+
+  /* LAPTOP font size and weight */
+  @media (min-width: 1280px) {
+    .H1-laptop {
+      @apply text-[117px] font-bold;
+    }
+
+    .H2-laptop {
+      @apply text-[89px] font-bold;
+    }
+
+    .H3-laptop {
+      @apply text-[67px] font-light;
+    }
+
+    .H3_bold-laptop {
+      @apply text-[67px] font-bold;
+    }
+
+    .H4-laptop {
+      @apply text-[50px] font-bold;
+    }
+
+    .H4_light-laptop {
+      @apply text-[50px] font-light;
+    }
+
+    .H4_semibold-laptop {
+      @apply text-[50px] font-semibold;
+    }
+
+    .H5-laptop {
+      @apply text-[38px] font-bold;
+    }
+
+    .H5_semibold-laptop {
+      @apply text-[38px] font-semibold;
+    }
+
+    .H5_light-laptop {
+      @apply text-[38px] font-light;
+    }
+
+    .P-laptop {
+      @apply text-[21px] font-normal;
+    }
+
+    .P_bold-laptop {
+      @apply text-[21px] font-bold;
+    }
+
+    .P_xl-laptop {
+      @apply text-[24px] font-normal;
+    }
+
+    .P_xl_semibold-laptop {
+      @apply text-[24px] font-semibold;
+    }
+
+    .p_xs-laptop {
+      @apply text-[16px] font-bold;
+    }
+
+    .p_xs_semibold-laptop {
+      @apply text-[16px] font-semibold;
+    }
+  }
 }
