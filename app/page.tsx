@@ -1,3 +1,17 @@
+import Companies from "@/components/Companies";
+import CTA from "@/components/CTA";
+import Hero from "@/components/Hero";
+import MyWork from "@/components/MyWork";
+
 export default function HomePage() {
-  return <div className="H1-phone H1-tablet H1-laptop"></div>;
+  return (
+    <div className="space-y-20">
+      <Hero />
+      <Companies />
+      <div id="my-work">
+        <MyWork />
+      </div>
+      <CTA />
+    </div>
+  );
 }

@@ -17,8 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <div className="min-h-[55vh] mt-28">{children}</div>
-        <Footer />
+        <div className="min-h-[55vh] mt-[130px]">{children}</div>
+        <div className="mt-[90px]">
+          <Footer />
+        </div>
       </body>
     </html>
   );

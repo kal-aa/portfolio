@@ -7,15 +7,11 @@ input {
   @apply cursor-pointer transition-all duration-200 ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
-  .flex- {
-    @apply flex justify-between items-center;
-  }
-
-  .try {
-    @apply text-8xl;
-  }
-
   /* Colors */
   .brand-gradient {
     @apply bg-gradient-to-r from-[#FE572E] to-[#FC3A79];
@@ -40,6 +36,10 @@ input {
   .black-75 {
     @apply text-[rgba(38,31,34,0.75)];
   }
+
+  /* .black-75-bg {
+    @apply bg-[rgba(38,31,34,0.75)];
+  } */
 
   .black-50 {
     @apply text-[rgba(38,31,34,0.5)];
@@ -104,6 +104,10 @@ input {
 
   .H5-phone {
     @apply text-[29px] font-bold;
+  }
+
+  .H5_semibold-phone {
+    @apply text-[29px] font-semibold;
   }
 
   .H5_light-phone {
@@ -264,6 +268,10 @@ input {
     }
   }
 
+  .flex- {
+    @apply flex justify-between items-center;
+  }
+
   /* Header */
   .header-container {
     @apply px-[48px] py-[24px] xl:px-[64px] xl:py-[32px] bg-white border-b;
@@ -283,6 +291,30 @@ input {
 
   .link-hover {
     @apply hover:text-[rgba(38,31,34,0.75)];
+  }
+
+  .see-my-work-btn {
+    @apply space-x-4 rounded-full text-white py-2 px-4 hover:scale-105 sm:py-3 sm:px-6 xl:py-4 xl:px-8;
+  }
+
+  .cta-btn {
+    @apply border-4 rounded-full min-w-[250px] max-w-[350px] w-full py-2 sm:py-3 xl:py-4 hover:bg-black hover:text-white hover:border-black;
+  }
+
+  .my-work-container {
+    @apply flex items-center overflow-x-auto snap-x snap-mandatory space-x-8 h-[685px];
+  }
+
+  .my-work-portfolio {
+    @apply flex-shrink-0 w-screen h-[670px] snap-start;
+  }
+
+  .my-work-testimonial {
+    @apply flex-shrink-0 w-screen flex flex-col items-center text-center space-y-12 px-8 sm:px-14 snap-start;
+  }
+
+  .portfolio-2-images {
+    @apply absolute w-[60%] object-cover;
   }
 
   /* Footer */
