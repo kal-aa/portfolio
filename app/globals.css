@@ -4,7 +4,7 @@ button,
 a,
 select,
 input {
-  @apply cursor-pointer transition-all duration-200 ease-in-out;
+  @apply cursor-pointer transition-all duration-300 ease-in-out;
 }
 
 html {
@@ -55,6 +55,10 @@ html {
 
   .black-10 {
     @apply text-[rgba(38,31,34,0.1)];
+  }
+
+  .black-10-bg {
+    @apply bg-[rgba(38,31,34,0.1)];
   }
 
   .black-10-border {
@@ -285,6 +289,8 @@ html {
     @apply flex flex-col items-center justify-center space-y-[6px] w-8 h-10 cursor-pointer;
   }
 
+  /* Home page */
+
   .hamburger-menu span {
     @apply w-6 h-[3px] transition-all duration-300;
   }
@@ -315,6 +321,63 @@ html {
 
   .portfolio-2-images {
     @apply absolute w-[60%] object-cover;
+  }
+
+  /* About me page */
+  .about-me-hero {
+    @apply flex flex-col items-center px-8 sm:px-16 xl:px-[128px] space-y-4 sm:space-y-6 xl:space-y-8 text-center;
+  }
+
+  .about-me-img-container {
+    @apply grid grid-cols-2 md:grid-cols-4 gap-6 xl:gap-8;
+  }
+
+  .about-me-img-container img {
+    @apply h-[328px] object-cover;
+  }
+
+  .can-do-icon {
+    @apply size-8 sm:size-12;
+  }
+
+  .can-do-container {
+    @apply px-8 sm:px-16 xl:px-[128px] space-y-8 sm:space-y-16;
+  }
+
+  .can-do-container section {
+    @apply flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-16;
+  }
+
+  .can-do-container section div {
+    @apply space-y-2 sm:space-y-4 xl:space-y-6;
+  }
+
+  .testimonials-container {
+    @apply flex flex-col space-y-8 sm:space-y-0 sm:space-x-8 sm:flex-row bg-[#E9E9E9] p-8 md:p-12;
+  }
+
+  .offers-container {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-16;
+  }
+
+  .tools-active-btn {
+    @apply bg-black text-white px-6 py-4 rounded-full w-[80%] sm:w-1/2;
+  }
+
+  .tools-inactive-btn {
+    @apply hover:scale-95 w-[80%] sm:w-1/2;
+  }
+
+  .tools-btn-container {
+    @apply flex flex-col justify-center items-center space-y-4 p-2 mx-[10%] rounded-xl overflow-hidden sm:flex-row sm:rounded-full sm:space-y-0 md:space-x-[5%];
+  }
+
+  .tools-list {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4;
+  }
+
+  .tools-list div {
+    @apply flex flex-col items-center justify-center p-4 space-y-2 rounded-2xl;
   }
 
   /* Footer */

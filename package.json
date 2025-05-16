@@ -15,7 +15,8 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-toastify": "^11.0.5",
-    "resend": "^4.5.1"
+    "resend": "^4.5.1",
+    "simple-icons": "^14.13.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function CTA() {
+export default function CTA({ bg = "white" }: { bg?: string }) {
   return (
     <div className="space-y-16  px-8 sm:px-[104px] sm:space-y-20">
       <div className="space-y-4 sm:space-y-6">
@@ -28,7 +28,9 @@ export default function CTA() {
 
       {/* CTA btn */}
       <Link href="/contact#contact-form">
-        <button className="cta-btn P_xs-phone P_xs-laptop">
+        <button
+          className={`cta-btn P_xs-phone P_xs-laptop ${bg === "red" ? "brand-gradient !border-[#FC3A79] text-white hover:scale-105" : ""}`}
+        >
           Got a Project in Mind? Let’s talk
         </button>
       </Link>
