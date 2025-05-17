@@ -259,6 +259,10 @@ html {
     @apply space-x-4 rounded-full text-white py-2 px-4 hover:scale-105 sm:py-3 sm:px-6 xl:py-4 xl:px-8;
   }
 
+  .scroll-btn {
+    @apply absolute top-1/2 -translate-y-1/2 p-3 sm:p-2 bg-white/60 hover:bg-white/80 rounded-full z-10 shadow transition
+  }
+
   .cta-btn {
     @apply border-4 rounded-full w-full py-2 sm:py-3 xl:py-4 hover:bg-black hover:text-white;
   }
