@@ -79,7 +79,7 @@ export default function Tools() {
 
   return (
     <div className="space-y-8 sm:space-y-12 xl:space-y-16 px-8">
-      <div className="tools-btn-container black-10-bg">
+      <div className="tools-btn-container bg-black/10">
         <button
           onClick={handleClick}
           className={isClicked ? "tools-active-btn" : "tools-inactive-btn"}
@@ -96,7 +96,7 @@ export default function Tools() {
 
       <div className="tools-list">
         {toolsToRender.map((d: Tools, i: number) => (
-          <div key={i} className="black-10-bg ">
+          <div key={i} className=" ">
             {d.icon}
             <p className="P_semibold-phone">{d.name}</p>
           </div>

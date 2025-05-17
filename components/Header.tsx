@@ -6,17 +6,17 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 export default function Header() {
   return (
-    <section className="fixed top-0 left-0 right-0 h-24 z-10">
-      <div className="flex- header-container black-10-border black">
+    <header className="fixed top-0 left-0 right-0 h-24 z-10">
+      <div className="flex- header-container border-black/10">
         {/* Left section */}
         <div className="flex- space-x-[32px] P-phone">
           <Link href="/" className="flex justify-center w-[48px] xl:w-[56px]">
             <Image
-              src="/logo.svg"
-              width={0}
-              height={0}
+              src="/Logo.svg"
+              width={1000}
+              height={1000}
               alt="Fox logo"
-              className="w-[40px] xl:w-[48px]"
+              className="size-[40px] xl:size-[48px]"
             />
           </Link>
           <div className="hidden sm:flex sm:space-x-[32px] sm:items-center ">
@@ -31,7 +31,7 @@ export default function Header() {
             {/* Social-media icons */}
             <SocialMediaIcons size={24} />
             {/* Vertical separator */}
-            <div className="w-1 h-[16px] black-25-bg"></div>
+            <div className="w-1 h-[16px] bg-black/25"></div>
           </div>
           {/* Email and phone */}
           <div className="email-phone-container">
@@ -48,6 +48,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

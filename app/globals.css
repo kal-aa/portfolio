@@ -25,50 +25,6 @@ html {
     @apply text-[#FE572E];
   }
 
-  .black {
-    @apply text-[rgba(38,31,34,1)];
-  }
-
-  .black-bg {
-    @apply bg-[rgba(38,31,34,1)];
-  }
-
-  .black-75 {
-    @apply text-[rgba(38,31,34,0.75)];
-  }
-
-  /* .black-75-bg {
-    @apply bg-[rgba(38,31,34,0.75)];
-  } */
-
-  .black-50 {
-    @apply text-[rgba(38,31,34,0.5)];
-  }
-
-  .black-25 {
-    @apply text-[rgba(38,31,34,0.25)];
-  }
-
-  .black-25-bg {
-    @apply bg-[rgba(38,31,34,0.25)];
-  }
-
-  .black-10 {
-    @apply text-[rgba(38,31,34,0.1)];
-  }
-
-  .black-10-bg {
-    @apply bg-[rgba(38,31,34,0.1)];
-  }
-
-  .black-10-border {
-    @apply border-[rgba(38,31,34,0.1)];
-  }
-
-  .black-5 {
-    @apply text-[rgba(38,31,34,0.05)];
-  }
-
   .error {
     @apply text-[#E63329];
   }
@@ -126,7 +82,7 @@ html {
     @apply text-[18px] font-semibold;
   }
 
-  .p_xs-phone {
+  .P_xs-phone {
     @apply text-[14px] font-bold;
   }
 
@@ -304,7 +260,7 @@ html {
   }
 
   .cta-btn {
-    @apply border-4 rounded-full min-w-[250px] max-w-[350px] w-full py-2 sm:py-3 xl:py-4 hover:bg-black hover:text-white hover:border-black;
+    @apply border-4 rounded-full w-full py-2 sm:py-3 xl:py-4 hover:bg-black hover:text-white;
   }
 
   .my-work-container {
@@ -377,7 +333,50 @@ html {
   }
 
   .tools-list div {
-    @apply flex flex-col items-center justify-center p-4 space-y-2 rounded-2xl;
+    @apply flex flex-col items-center justify-center p-4 space-y-2 rounded-2xl bg-black/10;
+  }
+
+  /* Contact page */
+  .contact-btns-container {
+    @apply flex flex-col justify-center items-center space-y-8 sm:space-y-0 sm:space-x-[5%] sm:flex-row sm:mx-[5%];
+  }
+
+  .contact-btns-container a {
+    @apply w-full flex justify-center;
+  }
+
+  .fqa-container {
+    @apply p-8 space-y-8 bg-black/10 sm:space-y-10 sm:p-12 xl:space-y-12 xl:p-16;
+  }
+
+  .fqa-container main {
+    @apply space-y-4 pl-[2%] sm:space-y-6 xl:space-y-8;
+  }
+
+  .fqa-container main section {
+    @apply space-y-2 items-center border-b border-black/50 pb-2 sm:space-y-4 xl:space-y-6;
+  }
+
+  .plus-minus {
+    @apply absolute top-0 left-0 transition-all duration-300 cursor-pointer;
+  }
+
+  .contact-form-section {
+    @apply flex flex-col md:items-center space-y-8 px-8 sm:px-10 md:flex-row md:space-y-0 md:space-x-[10%] xl:px-12;
+  }
+
+  .contact-form-section form {
+    @apply w-full md:w-1/2 space-y-10;
+  }
+
+  .contact-form-section label {
+    @apply space-y-2 text-black/75;
+  }
+
+  .contact-form-section input,
+  .contact-form-section select,
+  .contact-form-section textarea {
+    @apply bg-black/10 outline-none hover:border-1 hover:border-black/25 py-4 pl-4 rounded-lg w-full;
   }
 
   /* Footer */

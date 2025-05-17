@@ -18,13 +18,13 @@ export default function HamburgerMenu() {
         className="hamburger-menu"
       >
         <span
-          className={`black-bg ease-in-out ${isOpen ? "translate-y-2 rotate-45 " : ""}`}
+          className={`bg-black ease-in-out ${isOpen ? "translate-y-2 rotate-45 " : ""}`}
         ></span>
         <span
-          className={`black-bg ease-in-out ${isOpen ? "opacity-0" : ""}`}
+          className={`bg-black ease-in-out ${isOpen ? "opacity-0" : ""}`}
         ></span>
         <span
-          className={`black-bg ease-in-out ${isOpen ? "-translate-y-[10px] -rotate-45" : ""}`}
+          className={`bg-black ease-in-out ${isOpen ? "-translate-y-[10px] -rotate-45" : ""}`}
         ></span>
       </button>
     </section>

@@ -11,7 +11,7 @@ export default function AboutMePage() {
   ];
 
   return (
-    <div className="space-y-[88px]">
+    <div className="space-y-20">
       {/* Hero */}
       <div className="about-me-hero">
         <div className="H3_bold-phone black H3_bold-tablet H3_bold-laptop">
@@ -59,7 +59,7 @@ export default function AboutMePage() {
       <Tools />
 
       {/* CTA */}
-      <CTA bg={"red"} />
+      <CTA bg="red" />
     </div>
   );
 }

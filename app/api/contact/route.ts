@@ -1,64 +1,87 @@
-// /pages/api/contact.ts
-import { NextApiRequest, NextApiResponse } from "next";
-import { Resend } from "resend";
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-const resendApiKey = process.env.RESEND_API_KEY;
-console.log("Resend API Key:", resendApiKey);
+export async function POST(req: Request) {
+  const { name, email, message, timeline, budget } = await req.json();
 
-
-if (!resendApiKey) {
-  throw new Error("Missing RESEND_API_KEY in environment variables");
-}
-const resend = new Resend(resendApiKey);
-
-// const resend = new Resend(process.env.RESEND_API_KEY!);// Non-null assertion because the key should exist
-
-type Data = {
-  success: boolean;
-  error?: string;
-  message?: string;
-};
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  if (req.method !== "POST")
-    return res
-      .status(405)
-      .json({ success: false, error: "Method Not Allowed" });
-
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res
-      .status(400)
-      .json({ success: false, error: "Missing required fields" });
+  if (!name || !email || !message || !timeline || !budget) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: "Missing required fields",
+      },
+      { status: 400 }
+    );
   }
 
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "sadkalshayee@gmail.com",
+      pass: process.env.SMTP_PASSWORD,
+    },
+  });
+
   try {
-    // const data =
-    await resend.emails.send({
-      from: "sadkalshayee@gmail.com", // Change this to your email address
-      to: "sadkalshayee@gmail.com", // Change this to your email address
+    await transporter.sendMail({
+      from: "Kal Portfolio <sadkalshayee@gmail.com>",
+      to: ["kalasisa123@gmail.com"],
       subject: `New message from ${name}`,
       replyTo: email,
-      text: message,
-      //      text: `
-      //   Name: ${name}
-      //   Email: ${email}
-      //   Phone: ${phone}  // New phone number
-      //   Message: ${message}
-      // `,  // Include the phone number and other details
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; color: #333; max-width: 600px; margin: auto;">
+            <div style="text-align: center; margin-bottom: 20px;">
+              <!-- Opportunity Icon Image -->
+              <img
+                src="https://img.icons8.com/color/96/handshake.png"
+                alt="Opportunity Icon"
+                width="60"
+                height="60"
+                style={{ display: "block", margin: "auto" }}
+              />
+            </div>
+
+            <h2 style="color: #0070f3; text-align: center; margin-bottom: 20px;">📩 New message from ${name}</h2>
+
+            <p style="margin: 10px 0; font-size: 16px;">
+              <strong>📧 Email:</strong> <a href="mailto:${email}" style="color: #0070f3; text-decoration: none;">${email}</a>
+            </p>
+
+            <p style="margin: 10px 0; font-size: 16px;">
+              <strong>💬 Message:</strong><br />
+              <span style="white-space: pre-wrap;">${message}</span>
+            </p>
+
+            <p style="margin: 10px 0; font-size: 16px;">
+              <strong>⏳ Timeline:</strong> ${timeline}
+            </p>
+
+            <p style="margin: 10px 0; font-size: 16px;">
+              <strong>💰 Budget:</strong> ${budget}
+            </p>
+          </div>
+        `,
+      
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+        Timeline: ${timeline}
+        Budget: ${budget}
+      `,
     });
 
-    return res
-      .status(200)
-      .json({ success: true, message: "Message sent successfully!" });
+    return NextResponse.json({
+      success: true,
+      message: "Message sent successfully!",
+    });
   } catch (error) {
     console.error(error);
     const errorMessage =
       error instanceof Error ? error.message : "Failed to send email";
-    return res.status(500).json({ success: false, error: errorMessage });
+    return NextResponse.json(
+      { success: false, error: errorMessage },
+      { status: 500 }
+    );
   }
 }

@@ -8,9 +8,7 @@ export default function HomePage() {
     <div className="space-y-20">
       <Hero />
       <Companies />
-      <div id="my-work">
-        <MyWork />
-      </div>
+      <MyWork />
       <CTA />
     </div>
   );

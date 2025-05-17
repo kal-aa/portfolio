@@ -7,7 +7,7 @@ export default function MyWork() {
   const commerceAppUrl = "https://kal-commerce.vercel.app";
 
   return (
-    <div className="space-y-10">
+    <div id="my-work" className="space-y-10">
       <div className="flex flex-col items-center text-center space-y-6 px-8">
         <div className="H4-phone black">My Works</div>
         <div className="P-phone black-75">

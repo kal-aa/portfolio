@@ -5,10 +5,10 @@ import NavLinks from "./NavLinks";
 
 export default function Footer() {
   const footerSection =
-    "flex flex-col space-y-8 py-6 xl:py-8 border-t black-10-border";
+    "flex flex-col space-y-8 py-6 xl:py-8 border-t border-black/10";
 
   return (
-    <section className={footerSection}>
+    <footer className={footerSection}>
       <div className="footer-container">
         {/* Left section */}
         <div className="w-full sm:w-auto flex flex-col space-y-4 items-center">
@@ -42,7 +42,7 @@ export default function Footer() {
 
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src="/Logo.svg"
               width={0}
               height={0}
               alt="Fox logo"
@@ -52,9 +52,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="w-full black text-center">
+      <div className="w-full text-center">
         © Copyright Robert Fox 2022. All rights reserved
       </div>
-    </section>
+    </footer>
   );
 }
