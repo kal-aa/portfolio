@@ -72,7 +72,7 @@ export default function MyWork() {
           {/* Testimonial */}
           <div className="my-work-testimonial">
             <div className="H4_light-phone H4_light-tablet H4_light-laptop black max-w-[1000px]">
-              “Working with Robert has been an absolute pleasure and we’ll
+              “Working with Kalab has been an absolute pleasure and we’ll
               definitely turn to his expertise for new projects.”
             </div>
             <div className="space-y-8">
@@ -126,6 +126,23 @@ export default function MyWork() {
                   height={5000}
                   alt="apparel shop"
                   className="absolute right-[5%] bottom-0 w-[35%] h-[140px] object-cover"
+                />
+              </Link>
+            </div>
+          </div>
+          {/* Portfolio four */}
+          <div className="my-work-portfolio">
+            <div className="bg-[#9DCCE1] w-full h-[585px] flex-">
+              <Link
+                href="https://kal-aa.github.io/weather-app/"
+                target="_blank"
+              >
+                <Image
+                  src="/Weather.png"
+                  width={5000}
+                  height={5000}
+                  alt="messaging app"
+                  className="px-[5%] mt-10 h-[545px] object-cover"
                 />
               </Link>
             </div>

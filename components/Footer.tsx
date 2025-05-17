@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full text-center">
-        © Copyright Robert Fox 2022. All rights reserved
+        © Copyright Kalab Fox 2022. All rights reserved
       </div>
     </footer>
   );

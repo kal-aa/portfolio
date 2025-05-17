@@ -19,21 +19,23 @@ export default function AboutMePage() {
         </div>
         <div className="P-tablet black-75 space-y-2 max-w-[900px] xl:max-w-[1200px]">
           <p>
-            I was born in Henderson, Nevada almost three decades ago. From an
-            early age i showed interest for computers and that grew into a
-            passion during high school.
+            I was born in Woldia, Ethiopia almost two and a half decades ago.
+            From an early age, I showed interest in computers, and that
+            curiosity eventually grew into a passion.
           </p>
+
           <p>
-            I got into web design and development in college. Attending the
-            Carnegie Mellon University in Pittsburgh was the best decision i
-            ever made because it showed me what i wanted to do for the rest of
-            my life.
+            I got into web design and development through passion and
+            self-learning. Teaching myself and building projects out of
+            curiosity helped me discover what I truly enjoy and want to pursue
+            for the rest of my life.
           </p>
+
           <p>
-            Currently i help businesses all around the world by designing and
-            coding websites and mobile apps. I had the pleasure of working with
-            big companies like Apple, Microsoft, and Amazon just to name a few.
-            Right now I’m based in New York.
+            Currently, I help businesses around the world by designing and
+            coding websites and mobile apps. I’ve had the pleasure of working
+            with major companies like Apple, Microsoft, and Amazon — just to
+            name a few. Right now, I’m based in New York.
           </p>
         </div>
       </div>
