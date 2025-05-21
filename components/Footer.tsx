@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import SocialMediaIcons from "./SocialMediaIcons";
 import NavLinks from "./NavLinks";
+import ScrollToTop from "./ScrollToTop";
 
 export default function Footer() {
   const footerSection =
-    "flex flex-col space-y-8 py-6 xl:py-8 border-t border-black/10";
+    "flex flex-col space-y-8 py-6 xl:py-8 border-t border-black/10 relative";
 
   return (
     <footer className={footerSection}>
+      <ScrollToTop />
       <div className="footer-container">
         {/* Left section */}
         <div className="w-full sm:w-auto flex flex-col space-y-4 items-center">
@@ -42,6 +44,7 @@ export default function Footer() {
 
           <Link href="/">
             <Image
+              title="Home"
               src="/Logo.svg"
               width={0}
               height={0}

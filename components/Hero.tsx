@@ -1,19 +1,39 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <div className="flex flex-col items-center px-4 space-y-16">
       <div className="flex flex-col items-center text-center space-y-4">
-        <div className="H3-phone H3-tablet H3-laptop">Hey there I’m Kalab</div>
-        <div className="H2-phone H2-tablet H2-laptop">
+        <motion.div
+          initial={{ marginLeft: "-200%" }}
+          animate={{ marginLeft: 0 }}
+          transition={{ duration: 0.3 }}
+          className="H3-phone H3-tablet H3-laptop"
+        >
+          Hey there, I’m Kalab
+        </motion.div>
+        <motion.div
+          initial={{ marginRight: "-200%" }}
+          animate={{ marginRight: 0 }}
+          transition={{ duration: 0.5 }}
+          className="H2-phone H2-tablet H2-laptop w-full"
+        >
           Freelance Web Designer & Developer
-        </div>
-        <div className="P-phone P-laptop black-75 max-w-[1000px] xl:max-w-[1200px]">
+        </motion.div>
+        <motion.div
+          initial={{ marginLeft: "-200%" }}
+          animate={{ marginLeft: 0 }}
+          transition={{ duration: 1 }}
+          className="P-phone P-laptop black-75 max-w-[1000px] xl:max-w-[1200px] w-full"
+        >
           I help business grow by crafting amazing web experiences. If you’re
           looking for a designer and developer that likes to get stuff done,
           let’s talk
-        </div>
+        </motion.div>
       </div>
 
       {/* See my work btn */}

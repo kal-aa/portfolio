@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import ToastNotification from "@/components/ToastNotification";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: { default: "kal-portfolio", template: "%s" },
   description: "My Portfolio Website",
 };
 

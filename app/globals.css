@@ -260,7 +260,7 @@ html {
   }
 
   .scroll-btn {
-    @apply absolute top-1/2 -translate-y-1/2 p-3 sm:p-2 bg-white/60 hover:bg-white/80 rounded-full z-10 shadow transition
+    @apply absolute top-1/2 -translate-y-1/2 p-3 sm:p-2 bg-white/60 hover:bg-white/80 rounded-full z-10 shadow transition;
   }
 
   .cta-btn {
@@ -345,7 +345,8 @@ html {
     @apply flex flex-col justify-center items-center space-y-8 sm:space-y-0 sm:space-x-[5%] sm:flex-row sm:mx-[5%];
   }
 
-  .contact-btns-container a {
+  .contact-btns-container div,
+  .contact-btns-container div a {
     @apply w-full flex justify-center;
   }
 

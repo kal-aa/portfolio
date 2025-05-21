@@ -12,6 +12,7 @@ export default function Header() {
         <div className="flex- space-x-[32px] P-phone">
           <Link href="/" className="flex justify-center w-[48px] xl:w-[56px]">
             <Image
+              title="Home"
               src="/Logo.svg"
               width={1000}
               height={1000}
