@@ -29,9 +29,7 @@ interface Tools {
 }
 
 export default function Tools() {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => setIsClicked((prev) => !prev);
+  const [selected, setSelected] = useState<"design" | "dev">("design");
 
   const designTools = [
     {
@@ -75,20 +73,26 @@ export default function Tools() {
     },
   ];
 
-  const toolsToRender = isClicked ? designTools : devTools;
+  const toolsToRender = selected === "design" ? designTools : devTools;
 
   return (
     <div className="space-y-8 sm:space-y-12 xl:space-y-16 px-8">
       <div className="tools-btn-container bg-black/10">
         <button
-          onClick={handleClick}
-          className={isClicked ? "tools-active-btn" : "tools-inactive-btn"}
+          data-testid="tools-design-btn"
+          onClick={() => setSelected("design")}
+          className={
+            selected === "design" ? "tools-active-btn" : "tools-inactive-btn"
+          }
         >
           Tools I Use for Design
         </button>
         <button
-          onClick={handleClick}
-          className={!isClicked ? "tools-active-btn" : "tools-inactive-btn"}
+          data-testid="tools-dev-btn"
+          onClick={() => setSelected("dev")}
+          className={
+            selected === "dev" ? "tools-active-btn" : "tools-inactive-btn"
+          }
         >
           Tools I Use for Development
         </button>

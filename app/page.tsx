@@ -1,7 +1,7 @@
-import Companies from "@/components/Companies";
-import CTA from "@/components/CTA";
-import Hero from "@/components/Hero";
-import MyWork from "@/components/MyWork";
+import Companies from "@/components/Companies/Companies";
+import CTA from "@/components/CTA/CTA";
+import Hero from "@/components/Hero/Hero";
+import MyWork from "@/components/MyWork/MyWork";
 
 export default function HomePage() {
   return (

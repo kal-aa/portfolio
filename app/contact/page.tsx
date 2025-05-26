@@ -1,6 +1,6 @@
-import FQA from "@/components/FQA";
-import ContactForm from "@/components/ContactForm";
-import ContactBtns from "@/components/ContactBtns";
+import FQA from "@/components/FQA/FQA";
+import ContactForm from "@/components/ContactForm/ContactForm";
+import ContactBtns from "@/components/ContactBtns/ContactBtns";
 
 export default function ContactPage() {
   return (

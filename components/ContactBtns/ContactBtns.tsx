@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Btn from "@/components/Btn";
+import Btn from "@/components/Btn/Btn";
 
 export default function ContactBtns() {
   return (

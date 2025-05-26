@@ -3,11 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaAmazon } from "react-icons/fa";
-import ScrollBtn from "./ScrollBtn";
+import ScrollBtn from "../ScrollBtn/ScrollBtn";
 
 export default function MyWork() {
   const blogAppUrl = "https://kal-aa.github.io/blog-frontend";
   const commerceAppUrl = "https://kal-commerce.vercel.app";
+  const weatherAppUrl = "https://kal-aa.github.io/weather-app/";
+  const messageAppUrl = "https://quick-message-mu.vercel.app";
 
   return (
     <div id="my-work" className="space-y-10">
@@ -25,7 +27,7 @@ export default function MyWork() {
           {/* Portfolio one */}
           <div className="my-work-portfolio">
             <div className="bg-[#9DCCE1] w-full h-[585px] flex-">
-              <Link href="https://quick-message-mu.vercel.app" target="_blank">
+              <Link href={messageAppUrl} target="_blank">
                 <Image
                   src="/quick-message.png"
                   width={5000}
@@ -37,7 +39,7 @@ export default function MyWork() {
             </div>
           </div>
           {/* Portfolio two */}
-          <div className="my-work-portfolio">
+          <div data-testid="portfolio" className="my-work-portfolio">
             <div className="bg-[#1E40AF] w-full h-[585px] relative overflow-hidden">
               {/* 3 blog images */}
               <Link href={blogAppUrl} target="_blank">
@@ -70,7 +72,7 @@ export default function MyWork() {
             </div>
           </div>
           {/* Testimonial */}
-          <div className="my-work-testimonial">
+          <div data-testid="portfolio" className="my-work-testimonial">
             <div className="H4_light-phone H4_light-tablet H4_light-laptop black max-w-[1000px]">
               “Working with Kalab has been an absolute pleasure and we’ll
               definitely turn to his expertise for new projects.”
@@ -99,7 +101,7 @@ export default function MyWork() {
             </div>
           </div>
           {/* Portfolio three */}
-          <div className="my-work-portfolio">
+          <div data-testid="portfolio" className="my-work-portfolio">
             <div className="bg-[#525252] w-full h-[585px] relative">
               <Link href={commerceAppUrl} target="_blank">
                 <Image
@@ -131,12 +133,9 @@ export default function MyWork() {
             </div>
           </div>
           {/* Portfolio four */}
-          <div className="my-work-portfolio">
+          <div data-testid="portfolio" className="my-work-portfolio">
             <div className="bg-[#9DCCE1] w-full h-[585px] flex-">
-              <Link
-                href="https://kal-aa.github.io/weather-app/"
-                target="_blank"
-              >
+              <Link href={weatherAppUrl} target="_blank">
                 <Image
                   src="/Weather.png"
                   width={5000}

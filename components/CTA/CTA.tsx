@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Btn, { CtaBtn } from "./Btn";
-export default function CTA({ bg, text }: CtaBtn) {
+import Btn, { CtaBtn } from "../Btn/Btn";
+import React from "react";
+function CTA({ bg, text }: CtaBtn) {
   return (
     <div className="space-y-16  px-8 sm:px-[104px] sm:space-y-20">
       <div className="space-y-4 sm:space-y-6">
@@ -34,3 +35,5 @@ export default function CTA({ bg, text }: CtaBtn) {
     </div>
   );
 }
+
+export default React.memo(CTA);

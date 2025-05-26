@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-export default function FQA() {
+
+function FQA() {
   const [openFqaI, setOpenFqaI] = useState(-1);
 
   const fqas = [
@@ -40,10 +41,11 @@ export default function FQA() {
 
       <main>
         {fqas.map((f, i) => (
-          <section key={i}>
+          <section data-testid="fqa" key={i}>
             <div className="flex items-center space-x-4">
               <div className="relative size-4">
                 <FaPlus
+                  data-testid={`plus-icon-${i}`}
                   onClick={() => handleClick(i)}
                   className={`secondary plus-minus ${
                     openFqaI === i
@@ -52,6 +54,7 @@ export default function FQA() {
                   }`}
                 />
                 <FaMinus
+                  data-testid={`minus-icon-${i}`}
                   onClick={() => handleClick(i)}
                   className={`secondary plus-minus ${
                     openFqaI === i
@@ -63,13 +66,16 @@ export default function FQA() {
 
               <div
                 onClick={() => handleClick(i)}
-                className={`P_semibold-phone  cursor-pointer ${openFqaI === i ? "text-black/75" : ""}`}
+                className={`P_semibold-phone  cursor-pointer ${
+                  openFqaI === i ? "text-black/75" : ""
+                }`}
               >
                 {f.title}
               </div>
             </div>
             <div
-              className={` ${openFqaI === i ? "block" : "hidden"} P_xs-phone pl-10`}
+              className="P_xs-phone pl-10"
+              style={{ display: openFqaI === i ? "block" : "none" }}
             >
               {f.body}
             </div>
@@ -79,3 +85,5 @@ export default function FQA() {
     </section>
   );
 }
+
+export default React.memo(FQA);

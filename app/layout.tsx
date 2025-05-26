@@ -1,8 +1,10 @@
+// sm	640px
+// xl	1280px
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ToastNotification from "@/components/ToastNotification";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import ToastNotification from "@/components/ToastNotification/ToastNotification";
 
 export const metadata: Metadata = {
   title: { default: "kal-portfolio", template: "%s" },
@@ -27,6 +29,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// sm	640px
-// xl	1280px

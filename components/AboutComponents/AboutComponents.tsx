@@ -2,57 +2,58 @@ import Image from "next/image";
 import { FaAmazon, FaGithub } from "react-icons/fa";
 import { LuMonitorSmartphone, LuRocket, LuShoppingCart } from "react-icons/lu";
 import { RiAlarmLine, RiAwardLine } from "react-icons/ri";
-const canDos = [
-  {
-    icon: <RiAlarmLine className="can-do-icon" />,
-    title: "1. On-time delivery",
-    body: "I know time is money so i don’t want to waste yours or mine. So iguarantee that I will always deliver what you pay for as promised.",
-  },
-  {
-    icon: <RiAwardLine className="can-do-icon" />,
-    title: "2. Quality",
-    body: "I know time is money so i don’t want to waste yours or mine. So iguarantee that I will always deliver what you pay for as promised.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Sandra Marks",
-    position: "Creative Director at Github",
-    body: "Kalab is great. We worked together really well and we’ll definitely contract his services in the future.",
-    img: "/sandra.jpg",
-    icon: <FaGithub size={38} />,
-    bg: "bg-[#E5E5E9]",
-  },
-  {
-    name: "Robert Wittings",
-    position: "Marketign Director at Amazon",
-    body: "Working with Kalab has been an absolute pleasure and we’ll definetely turn to his expertise for new projects.",
-    img: "/robert.png",
-    icon: <FaAmazon size={38} />,
-    bg: "bg-[#FF5667]",
-  },
-];
-
-const offers = [
-  {
-    icon: <LuRocket className="can-do-icon" strokeWidth={1.3} />,
-    title: "I can design and build a responsive and accessible website",
-    body: "I know time is money so i don’t want to waste yours or mine. So i guarantee that I will always deliver what you pay for as promised.",
-  },
-  {
-    icon: <LuShoppingCart className="can-do-icon" strokeWidth={1.3} />,
-    title: "I can design and build an ECommerce store",
-    body: "I have extensive knowledge of development on the front-end and back-end so I’m able to deliver a completely functional eCommerce website.",
-  },
-  {
-    icon: <LuMonitorSmartphone className="can-do-icon" strokeWidth={1.3} />,
-    title: "I can design and build a mobile app for iOS and Android",
-    body: "I recently started designing and coding mobile apps and i love it. It’s a different process compared to traditional website design but I’ve been successful in all projects so far.",
-  },
-];
 
 export default function AboutComponents() {
+  const canDos = [
+    {
+      icon: <RiAlarmLine className="can-do-icon" />,
+      title: "1. On-time delivery",
+      body: "Deadlines matter. I respect your schedule and ensure that all work is delivered exactly when promised—no delays, no excuses.",
+    },
+    {
+      icon: <RiAwardLine className="can-do-icon" />,
+      title: "2. Quality",
+      body: "I don’t cut corners. You’ll get clean, efficient, and reliable code that meets modern standards and performs as expected across devices.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sandra Marks",
+      position: "Creative Director at Github",
+      body: "Kalab is great. We worked together really well and we’ll definitely contract his services in the future.",
+      img: "/sandra.jpg",
+      icon: <FaGithub size={38} />,
+      bg: "bg-[#E5E5E9]",
+    },
+    {
+      name: "Robert Wittings",
+      position: "Marketign Director at Amazon",
+      body: "Working with Kalab has been an absolute pleasure and we’ll definetely turn to his expertise for new projects.",
+      img: "/robert.png",
+      icon: <FaAmazon size={38} />,
+      bg: "bg-[#FF5667]",
+    },
+  ];
+
+  const offers = [
+    {
+      icon: <LuRocket className="can-do-icon" strokeWidth={1.3} />,
+      title: "I can design and build a responsive and accessible website",
+      body: "I know time is money so i don’t want to waste yours or mine. So i guarantee that I will always deliver what you pay for as promised.",
+    },
+    {
+      icon: <LuShoppingCart className="can-do-icon" strokeWidth={1.3} />,
+      title: "I can design and build an ECommerce store",
+      body: "I have extensive knowledge of development on the front-end and back-end so I’m able to deliver a completely functional eCommerce website.",
+    },
+    {
+      icon: <LuMonitorSmartphone className="can-do-icon" strokeWidth={1.3} />,
+      title: "I can design and build a mobile app for iOS and Android",
+      body: "I recently started designing and coding mobile apps and i love it. It’s a different process compared to traditional website design but I’ve been successful in all projects so far.",
+    },
+  ];
+
   return (
     <div className="space-y-[88px]">
       {/* Can-dos */}
@@ -112,7 +113,9 @@ export default function AboutComponents() {
         {offers.map((offer, index) => (
           <div
             key={index}
-            className={`space-y-4 sm:space-y-6 xl:space-y-8 ${index === 2 ? "sm:col-span-2 lg:col-span-1" : ""}`}
+            className={`space-y-4 sm:space-y-6 xl:space-y-8 ${
+              index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
+            }`}
           >
             {offer.icon}
             <div className="H5_semibold-phone H5_semibold-tablet H5_semibold-laptop black">

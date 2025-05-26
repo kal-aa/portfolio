@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Tools from "../../components/Tools";
-import CTA from "../../components/CTA";
-import AboutComponents from "@/components/AboutComponents";
-import AboutMeHero from "@/components/AboutMeHero";
+import Tools from "../../components/Tools/Tools";
+import CTA from "../../components/CTA/CTA";
+import AboutComponents from "@/components/AboutComponents/AboutComponents";
+import AboutMeHero from "@/components/AboutMeHero/AboutMeHero";
 
 export default function AboutMePage() {
   const images = [
@@ -15,7 +15,6 @@ export default function AboutMePage() {
     <div className="space-y-20">
       {/* Hero */}
       <AboutMeHero />
-
       {/* Workspace Images */}
       <div className="about-me-img-container">
         {images.map((img) => (
@@ -29,13 +28,10 @@ export default function AboutMePage() {
           />
         ))}
       </div>
-
       {/* Other components */}
       <AboutComponents />
-
       {/* Tools */}
       <Tools />
-
       {/* CTA */}
       <CTA bg="red" />
     </div>

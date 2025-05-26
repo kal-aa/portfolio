@@ -6,7 +6,7 @@ export default function ScrollBtn() {
     const card = container?.querySelector(".my-work-portfolio") as HTMLElement;
 
     if (container && card) {
-      const scrollAmount = card.offsetWidth + 32; // 32 is the space bn them, the children
+      const scrollAmount = card.offsetWidth + 32; // 32 = the space bn the children
       container.scrollBy({
         left: direction === "right" ? scrollAmount : -scrollAmount,
         behavior: "smooth",
@@ -16,6 +16,7 @@ export default function ScrollBtn() {
   return (
     <>
       <button
+        data-testid="scroll-left-btn"
         onClick={() => scrollByCard("left")}
         className="left-2 scroll-btn"
       >
@@ -23,6 +24,7 @@ export default function ScrollBtn() {
       </button>
 
       <button
+        data-testid="scroll-right-btn"
         onClick={() => scrollByCard("right")}
         className="right-2 scroll-btn"
       >

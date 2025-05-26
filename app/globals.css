@@ -234,7 +234,11 @@ html {
 
   /* Header */
   .header-container {
-    @apply px-[48px] py-[24px] xl:px-[64px] xl:py-[32px] bg-white border-b;
+    @apply fixed top-2 left-2 right-2 h-24 z-50 bg-white rounded-2xl drop-shadow-xs drop-shadow-black/20;
+  }
+
+  .header-tooltip {
+    @apply absolute hidden top-full mt-2 bg-black text-white rounded-lg px-2 text-sm group-hover:block font-extralight font-serif;
   }
 
   .email-phone-container {
@@ -381,7 +385,7 @@ html {
   .contact-form-section input,
   .contact-form-section select,
   .contact-form-section textarea {
-    @apply bg-black/10 outline-none hover:border-1 hover:border-black/25 py-4 pl-4 rounded-lg w-full;
+    @apply mt-2 bg-black/10 outline-none hover:border-[0.1px] hover:border-black/25 py-4 pl-4 rounded-lg w-full;
   }
 
   /* Footer */

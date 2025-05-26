@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import SocialMediaIcons from "./SocialMediaIcons";
-import NavLinks from "./NavLinks";
-import ScrollToTop from "./ScrollToTop";
+import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
+import NavLinks from "../NavLinks/NavLinks";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 export default function Footer() {
   const footerSection =
@@ -45,11 +45,12 @@ export default function Footer() {
           <Link href="/">
             <Image
               title="Home"
-              src="/Logo.svg"
-              width={0}
-              height={0}
+              src="/eagle.png"
+              width={1000}
+              height={1000}
               alt="Fox logo"
-              className="w-[32px] sm:mb-3 xl:mb-auto"
+              className="w-[32px] sm:mb-3 xl:mb-auto
+              ring ring-black/50 rounded-full brightness-[98%]"
             />
           </Link>
         </div>

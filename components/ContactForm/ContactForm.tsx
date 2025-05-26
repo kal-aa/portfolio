@@ -2,9 +2,9 @@
 
 import { useState, ChangeEvent, FormEvent } from "react";
 import { toast } from "react-toastify";
-import Btn from "./Btn";
+import Btn from "../Btn/Btn";
 
-interface FormData {
+export interface FormData {
   name: string;
   email: string;
   message: string;
@@ -44,14 +44,12 @@ export default function ContactForm() {
       if (result.success) {
         toast.success("Message sent!");
         setTimeout(() => {
-          toast.success("I usually reply within 24 hours");
-        }, 1000);
+          toast.info("I usually reply within 24 hours");
+        }, 3000);
         setForm({ name: "", email: "", message: "", timeline: "", budget: "" });
-      } else {
-        toast.error(result.error || "Something went wrong.");
       }
     } catch (error) {
-      toast.error("Server error.");
+      toast.error("Server error");
       console.error("Error sending message:", error);
     }
 
@@ -73,7 +71,7 @@ export default function ContactForm() {
       <form id="contact-form" onSubmit={handleSubmit}>
         <div className="flex flex-col space-y-6">
           <label className={`${label} w-1/2`} htmlFor="name">
-            <p>Name</p>
+            Name
             <input
               id="name"
               name="name"
@@ -82,12 +80,14 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Name"
               required
-              className={`${loading ? "border border-black/30 !hover:black-10" : ""}`}
+              className={`${
+                loading ? "border border-black/30 !hover:black-10" : ""
+              }`}
             />
           </label>
 
           <label className={`${label} w-1/2`} htmlFor="email">
-            <p>Email</p>
+            Email
             <input
               id="email"
               name="email"
@@ -96,12 +96,14 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Email address"
               required
-              className={`${loading ? "border border-black/30 !hover:black-10" : ""}`}
+              className={`${
+                loading ? "border border-black/30 !hover:black-10" : ""
+              }`}
             />
           </label>
 
           <label className={`${label} w-full`} htmlFor="message">
-            <p>Description</p>
+            Description
             <textarea
               id="message"
               name="message"
@@ -110,20 +112,24 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Project Details"
               required
-              className={`${loading ? "border border-black/30 !hover:black-10" : ""}`}
+              className={`${
+                loading ? "border border-black/30 !hover:black-10" : ""
+              }`}
             />
           </label>
 
           <div className="flex flex-col sm:flex-row sm:space-x-[5%] space-y-4 sm:space-y-0">
-            <label className={`${label} w-full`} htmlFor="timeline">
-              <p>Timeline</p>
+            <label htmlFor="timeline" className={`${label} w-full`}>
+              Timeline
               <select
                 id="timeline"
                 name="timeline"
                 value={form.timeline}
                 onChange={handleChange}
                 required
-                className={`${loading ? "border border-black/30 !hover:black-10" : ""}`}
+                className={`${
+                  loading ? "border border-black/30 !hover:black-10" : ""
+                }`}
               >
                 <option value="" disabled>
                   Select a timeline
@@ -135,15 +141,19 @@ export default function ContactForm() {
               </select>
             </label>
 
-            <label className={`${label} w-full`} htmlFor="budget">
-              <p>Budget</p>
+            <label htmlFor="budget" className={`${label} w-full`}>
+              Budget
               <select
                 id="budget"
                 name="budget"
                 value={form.budget}
                 onChange={handleChange}
                 required
-                className={`${loading ? "border border-black/30 !hover:black-10" : "hover:bg-black/8"}`}
+                className={`${
+                  loading
+                    ? "border border-black/30 !hover:black-10"
+                    : "hover:bg-black/8"
+                }`}
               >
                 <option value="" disabled>
                   Select a budget
