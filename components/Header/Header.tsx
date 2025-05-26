@@ -15,7 +15,7 @@ export default function Header() {
               src="/eagle.png"
               width={1000}
               height={1000}
-              alt="Fox logo"
+              alt="Eagle logo"
               className="size-[40px] xl:size-[48px] ring ring-black/50 rounded-full brightness-[98%]"
             />
             <span className="header-tooltip">Home</span>

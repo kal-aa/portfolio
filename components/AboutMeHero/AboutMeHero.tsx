@@ -18,7 +18,7 @@ export default function AboutMeHero() {
         >
           Kalab
         </motion.span>{" "}
-        Fox
+        Eagle
       </motion.div>
       <div className="P-tablet black-75 space-y-2 max-w-[900px] xl:max-w-[1200px]">
         <motion.p

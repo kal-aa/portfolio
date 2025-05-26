@@ -48,7 +48,7 @@ export default function Footer() {
               src="/eagle.png"
               width={1000}
               height={1000}
-              alt="Fox logo"
+              alt="Eagle logo"
               className="w-[32px] sm:mb-3 xl:mb-auto
               ring ring-black/50 rounded-full brightness-[98%]"
             />
@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full text-center">
-        © Copyright Kalab Fox 2022. All rights reserved
+        © Copyright Kalab Eagle 2022. All rights reserved
       </div>
     </footer>
   );
