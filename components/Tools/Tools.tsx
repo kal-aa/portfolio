@@ -97,10 +97,9 @@ export default function Tools() {
           Tools I Use for Development
         </button>
       </div>
-
       <div className="tools-list">
         {toolsToRender.map((d: Tools, i: number) => (
-          <div key={i} className=" ">
+          <div key={i}>
             {d.icon}
             <p className="P_semibold-phone">{d.name}</p>
           </div>

@@ -337,11 +337,11 @@ html {
   }
 
   .tools-list {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4;
+    @apply flex flex-wrap justify-center items-center gap-8;
   }
 
   .tools-list div {
-    @apply flex flex-col items-center justify-center p-4 space-y-2 rounded-2xl bg-black/10;
+    @apply flex flex-col items-center justify-center p-4 space-y-2 rounded-2xl bg-black/10 grow basis-[200px] max-w-[300px];
   }
 
   /* Contact page */
