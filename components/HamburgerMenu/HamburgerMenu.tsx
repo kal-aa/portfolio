@@ -22,7 +22,7 @@ export default function HamburgerMenu() {
       >
         <span
           className={`bg-black ease-in-out ${
-            isOpen ? "translate-y-2 rotate-45 " : ""
+            isOpen ? "translate-y-2 -rotate-45 " : ""
           }`}
         ></span>
         <span
@@ -30,7 +30,7 @@ export default function HamburgerMenu() {
         ></span>
         <span
           className={`bg-black ease-in-out ${
-            isOpen ? "-translate-y-[10px] -rotate-45" : ""
+            isOpen ? "-translate-y-[10px] rotate-45" : ""
           }`}
         ></span>
       </button>
