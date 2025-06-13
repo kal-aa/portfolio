@@ -6,7 +6,7 @@ import { FaAmazon } from "react-icons/fa";
 import ScrollBtn from "../ScrollBtn/ScrollBtn";
 
 export default function MyWork() {
-  const blogAppUrl = "https://kal-aa.github.io/blog-frontend";
+  const blogAppUrl = "https://blog-frontend-umber-two.vercel.app/";
   const commerceAppUrl = "https://kal-commerce.vercel.app";
   const weatherAppUrl = "https://kal-aa.github.io/weather-app/";
   const messageAppUrl = "https://quick-message-mu.vercel.app";
