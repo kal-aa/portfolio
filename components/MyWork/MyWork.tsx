@@ -6,10 +6,10 @@ import { FaAmazon } from "react-icons/fa";
 import ScrollBtn from "../ScrollBtn/ScrollBtn";
 
 export default function MyWork() {
-  const blogAppUrl = "https://blog-frontend-umber-two.vercel.app/";
+  const blogAppUrl = "https://kal-blog.vercel.app";
   const commerceAppUrl = "https://kal-commerce.vercel.app";
-  const weatherAppUrl = "https://kal-aa.github.io/weather-app/";
   const messageAppUrl = "https://quick-message-mu.vercel.app";
+  const weatherAppUrl = "https://kal-weather.vercel.app";
 
   return (
     <div id="my-work" className="space-y-10">
